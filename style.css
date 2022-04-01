@@ -15,19 +15,36 @@ body {
 .image-container {
     margin: 0;
     display: flex;
+    position: relative;
+    
 }
+
+.image-container:hover {
+    transform: scale(1.05);
+    z-index: 999;
+  }
 
 .image-container img {
     margin: 0;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
+
+.image-text {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: aliceblue;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 11.7333px;
+  }
 
 .nav-bar-div {
     height: 3rem;
     width: 100%;
     background-color: #34363b;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -36,6 +53,7 @@ body {
     color: white;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     padding: 0 1rem;
+    font-size: smaller;
 }
 
 @media screen and (max-width: 768px) {
