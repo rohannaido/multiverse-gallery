@@ -22,3 +22,24 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.nav-bar-div {
+    height: 3rem;
+    width: 100%;
+    background-color: #34363b;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        grid-template-columns: auto ;
+    }
+}
