@@ -20,4 +20,3 @@ closeImageButton.addEventListener('click', () => {
     mainContainer.style.filter = 'none';
     navBar.style.display = 'flex';
 })
-
