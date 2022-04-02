@@ -20,9 +20,9 @@ body {
 }
 
 .image-container:hover {
-    transform: scale(1.05);
-    z-index: 998;
-  }
+    transform: scale(1.025);
+    z-index: 997;
+}
 
 .image-container img {
     margin: 0;
@@ -31,19 +31,41 @@ body {
     cursor: pointer;
 }
 
-.display-image{
+.display-image-background {
     display: none;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    height: 70%;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+}
+
+.display-image-blur {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 998;
+    background-color: gray;
+    opacity: 0.8;
+    filter: blur(32px);
+    -webkit-filter: blur(8px);
+}
+
+.display-image{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
     z-index: 999;
 }
 
 .display-image img {
-    margin: 0;
+    display: inline;
+    margin: auto;
     height: 100%;
     width: 100%;
 }
@@ -55,6 +77,7 @@ body {
     width: 32px;
     height: 32px;
     opacity: 0.3;
+    cursor: pointer;
 }
 .close:hover {
 opacity: 1;
@@ -97,10 +120,15 @@ transform: rotate(-45deg);
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     padding: 0 1rem;
     font-size: smaller;
+    z-index: 998;
 }
 
 @media screen and (max-width: 768px) {
     .main-container {
         grid-template-columns: auto ;
+    }
+    .display-image {
+        width: 100%;
+        height: auto;
     }
 }

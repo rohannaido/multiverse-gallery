@@ -1,5 +1,5 @@
 const imageContainers = document.querySelectorAll('.image-container');
-const displayImageBox = document.querySelector('.display-image');
+const displayImageBox = document.querySelector('.display-image-background');
 const closeImageButton = document.querySelector('.close');
 
 const imageDisplay = (imageContainer) => {
@@ -14,3 +14,7 @@ imageContainers.forEach(imageDisplay);
 closeImageButton.addEventListener('click', () => {
     displayImageBox.style.display = 'none';
 })
+
+// const headerNav = document.querySelector('.header-nav');
+// // const rect = headerNav.getBoundingClientRect();
+// // console.log(rect.top, rect.right, rect.bottom, rect.left);
